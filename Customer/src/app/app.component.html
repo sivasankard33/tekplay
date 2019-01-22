@@ -1,0 +1,28 @@
+<nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class = "navbar-brand" href="#">Samsung</a>
+    <button class="navbar-toggier" type ="button">
+      <span class ="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class ="collapse navbar-collapse" id="navbarSupportContent">
+  <ul class="navbar-nav mr-auto">
+    <li class ="nav-item">
+      <a class ="nav-link" routerLink="/comments" routerLinkActive="active">Complaint</a>
+    </li>
+    <li class ="nav-item">
+      <a class="nav-link" routerLink="/usercomments" routerLinkActive="active">Usercomplaints</a>
+    </li>
+  </ul>
+  <ul class ="navbar-nav">
+    
+    <a class="nav-link" *ngIf="!_authservice.loggedIn()"    routerLink="/login" routerLinkActive="active">Login</a>
+    <a class="nav-link" *ngIf="!_authservice.loggedIn()"   routerLink="/SignUp" routerLinkActive="active">SignUp</a>
+    <a class="nav-link" *ngIf="_authservice.loggedIn()" style="cursor: pointer;"  (click)="_authservice.logoutuser()">LogOut</a>
+  </ul>
+    </div>
+  
+  </nav>
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>

@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+<div class ="row pt-5">
+    <div class ="col-md-6 mx-auto">
+      <div class ="card rounded=0">
+        <div class="card-header">
+          <h3 class ="mb-0"style="text-align: center">User Complaints</h3>
+        </div>
+          <div class ="card-body">
+              <table>
+                  <thead>
+                     <tr>
+                          <th>Heading</th>
+                          <th>Complaint</th>
+                          <th>Date</th>
+                          <th>Status</th>
+                      </tr>
+                  </thead>
+                    <tbody>
+                        <tr *ngFor='let cts of complaints'>
+                          <td>{{cts.heading}}</td>
+                          <td>{{cts.complaint}}</td>
+                          <td>{{cts.date}}</td>
+                          <td>{{cts.status}}</td>
+                        </tr>
+                    </tbody>
+                
+                </table>
+            
+  
+          </div>
+  
+      </div>
+  
+    </div>
+  
+  </div>
+
+
+
+
+
+
+
+
